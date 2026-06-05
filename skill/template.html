@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Native 每日洞察 · {{DATE}}</title>
+<style>
+  :root{
+    --bg:#0b0e14; --card:#141925; --card2:#1a2030; --line:#252c3d;
+    --ink:#e8ecf4; --sub:#9aa6bd; --mut:#69748c;
+    --accent:#5b8cff; --accent2:#7c5cff; --cn:#ff5b6e; --cn-bg:#2a1620;
+    --green:#2fd47e; --amber:#ffb443;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;padding:0 0 60px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+
+  /* Header */
+  header{padding:34px 0 18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  .kicker{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--sub);font-size:13px;letter-spacing:.04em}
+  .badge{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+    padding:3px 10px;border-radius:999px;font-weight:600;font-size:12px}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:12px 0 4px;line-height:1.2}
+  .h1-sub{color:var(--sub);font-size:14px}
+
+  /* Section titles */
+  .sec{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;
+    color:var(--sub);letter-spacing:.08em;text-transform:uppercase;margin:30px 0 14px}
+  .sec .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .tldr li{list-style:none;display:flex;gap:11px;padding:7px 0;font-size:15px}
+  .tldr li+li{border-top:1px solid var(--line)}
+  .tldr .num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--accent);color:#fff;
+    font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:3px}
+
+  /* China radar */
+  .radar{background:linear-gradient(135deg,var(--cn-bg),#19131c);
+    border:1px solid #3a2230;border-radius:16px;padding:18px 20px}
+  .radar .sec{color:var(--cn);margin:0 0 12px}
+  .radar .sec .dot{background:var(--cn)}
+  .radar-item{display:flex;gap:11px;padding:8px 0;font-size:14.5px}
+  .radar-item+.radar-item{border-top:1px solid #3a2230}
+  .radar-item .ic{flex:none;font-size:16px;margin-top:1px}
+  .radar-item b{color:#ffd0d6;font-weight:600}
+
+  /* Cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:18px 20px;margin-bottom:14px;transition:border-color .2s}
+  .card:hover{border-color:#33405e}
+  .card-top{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 9px;border-radius:6px;text-transform:uppercase}
+  .tag.launch{background:#13301f;color:var(--green)}
+  .tag.fund{background:#2e2410;color:var(--amber)}
+  .tag.trend{background:#15233f;color:var(--accent)}
+  .tag.model{background:#231a3a;color:#b79cff}
+  .src{color:var(--mut);font-size:12px;margin-left:auto}
+  .card h3{font-size:18px;font-weight:700;line-height:1.35;margin-bottom:8px}
+  .card h3 a{color:var(--ink);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .row{display:flex;gap:9px;font-size:14.5px;color:var(--sub);padding:3px 0}
+  .row .lab{flex:none;color:var(--mut);font-size:12.5px;font-weight:600;width:54px;padding-top:1px}
+  .row.cn{margin-top:9px;padding-top:11px;border-top:1px dashed #33283050;color:#ffc4cc}
+  .row.cn .lab{color:var(--cn)}
+  .thumb{width:100%;height:160px;object-fit:cover;border-radius:11px;margin:4px 0 12px;background:var(--card2)}
+  .more{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-size:13px;
+    color:var(--accent);text-decoration:none;font-weight:600}
+
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+    color:var(--mut);font-size:12.5px;line-height:1.8}
+  footer a{color:var(--sub)}
+  @media(max-width:560px){h1{font-size:25px}.wrap{padding:0 14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">
+      <span class="badge">☕ 5分钟读完</span>
+      <span>AI NATIVE 产品市场洞察 · Daily Digest</span>
+    </div>
+    <h1>{{HEADLINE}}</h1>
+    <div class="h1-sub">{{DATE}} · 今日精选 {{COUNT}} 条 · 全球动态 × 中国机会</div>
+  </header>
+
+  <!-- ============ 今日速览 / TL;DR (3条最高信号) ============ -->
+  <div class="sec"><span class="dot"></span>今日速览</div>
+  <ul class="tldr">
+    <!-- 每条：<li><span class="num">1</span><span>一句话最关键判断</span></li> -->
+    {{TLDR}}
+  </ul>
+
+  <!-- ============ 中国机会雷达 (1-3条可复制/本地化机会) ============ -->
+  <div class="radar" style="margin-top:24px">
+    <div class="sec"><span class="dot"></span>🇨🇳 中国机会雷达</div>
+    <!-- 每条：<div class="radar-item"><span class="ic">🎯</span><span><b>机会标题</b> — 一句话说清为什么是中国市场的窗口/空白。</span></div> -->
+    {{RADAR}}
+  </div>
+
+  <!-- ============ 全球动态 (6-9 张卡片，按信号强度排序) ============ -->
+  <div class="sec" style="margin-top:30px"><span class="dot"></span>全球动态</div>
+  {{CARDS}}
+
+  <footer>
+    <div>📡 信源：Product Hunt · Hacker News · TechCrunch · The Verge · a16z · HuggingFace · GitHub Trending · 各家官方博客 等</div>
+    <div>🤖 由 ai-native-digest skill 自动生成 · {{GENERATED_AT}} · 仅供个人洞察参考，请点击原文核实</div>
+  </footer>
+
+</div>
+</body>
+</html>
+
+<!--
+=================== 卡片模板（复制此结构，替换内容）===================
+<div class="card">
+  <div class="card-top">
+    <span class="tag launch">新品发布</span>   <!-- launch=新品 / fund=融资 / trend=趋势 / model=模型 -->
+    <span class="src">来源 · 时间</span>
+  </div>
+  <h3><a href="原文URL" target="_blank">产品/事件标题</a></h3>
+  <img class="thumb" src="配图URL" alt="" onerror="this.style.display='none'">  <!-- 没有可靠配图就删掉这行 -->
+  <div class="row"><span class="lab">是什么</span><span>一句话讲清这是什么产品/事件。</span></div>
+  <div class="row"><span class="lab">为什么</span><span>为什么重要——信号、量级、对格局的影响。</span></div>
+  <div class="row cn"><span class="lab">中国机会</span><span>对中国市场意味着什么：可复制的模式、本地化空白、出海或防御角度。</span></div>
+  <a class="more" href="原文URL" target="_blank">读原文 →</a>
+</div>
+======================================================================
+-->
