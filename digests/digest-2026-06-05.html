@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Native 每日洞察 · 2026-06-05</title>
+<style>
+  :root{
+    --bg:#0b0e14; --card:#141925; --card2:#1a2030; --line:#252c3d;
+    --ink:#e8ecf4; --sub:#9aa6bd; --mut:#69748c;
+    --accent:#5b8cff; --accent2:#7c5cff; --cn:#ff5b6e; --cn-bg:#2a1620;
+    --green:#2fd47e; --amber:#ffb443;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;padding:0 0 60px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  header{padding:34px 0 18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  .kicker{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--sub);font-size:13px;letter-spacing:.04em}
+  .badge{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+    padding:3px 10px;border-radius:999px;font-weight:600;font-size:12px}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:12px 0 4px;line-height:1.2}
+  .h1-sub{color:var(--sub);font-size:14px}
+  .sec{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;
+    color:var(--sub);letter-spacing:.08em;text-transform:uppercase;margin:30px 0 14px}
+  .sec .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .tldr li{list-style:none;display:flex;gap:11px;padding:7px 0;font-size:15px}
+  .tldr li+li{border-top:1px solid var(--line)}
+  .tldr .num{flex:none;width:22px;height:22px;border-radius:7px;background:var(--accent);color:#fff;
+    font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:3px}
+  .radar{background:linear-gradient(135deg,var(--cn-bg),#19131c);
+    border:1px solid #3a2230;border-radius:16px;padding:18px 20px}
+  .radar .sec{color:var(--cn);margin:0 0 12px}
+  .radar .sec .dot{background:var(--cn)}
+  .radar-item{display:flex;gap:11px;padding:8px 0;font-size:14.5px}
+  .radar-item+.radar-item{border-top:1px solid #3a2230}
+  .radar-item .ic{flex:none;font-size:16px;margin-top:1px}
+  .radar-item b{color:#ffd0d6;font-weight:600}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:18px 20px;margin-bottom:14px;transition:border-color .2s}
+  .card:hover{border-color:#33405e}
+  .card-top{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 9px;border-radius:6px;text-transform:uppercase}
+  .tag.launch{background:#13301f;color:var(--green)}
+  .tag.fund{background:#2e2410;color:var(--amber)}
+  .tag.trend{background:#15233f;color:var(--accent)}
+  .tag.model{background:#231a3a;color:#b79cff}
+  .src{color:var(--mut);font-size:12px;margin-left:auto}
+  .card h3{font-size:18px;font-weight:700;line-height:1.35;margin-bottom:8px}
+  .card h3 a{color:var(--ink);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .row{display:flex;gap:9px;font-size:14.5px;color:var(--sub);padding:3px 0}
+  .row .lab{flex:none;color:var(--mut);font-size:12.5px;font-weight:600;width:54px;padding-top:1px}
+  .row.cn{margin-top:9px;padding-top:11px;border-top:1px dashed #4a2e38;color:#ffc4cc}
+  .row.cn .lab{color:var(--cn)}
+  .thumb{width:100%;height:170px;object-fit:cover;border-radius:11px;margin:4px 0 12px;background:var(--card2)}
+  .more{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-size:13px;
+    color:var(--accent);text-decoration:none;font-weight:600}
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+    color:var(--mut);font-size:12.5px;line-height:1.8}
+  footer a{color:var(--sub)}
+  @media(max-width:560px){h1{font-size:25px}.wrap{padding:0 14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">
+      <span class="badge">☕ 5分钟读完</span>
+      <span>AI NATIVE 产品市场洞察 · Daily Digest</span>
+    </div>
+    <h1>入口之战：Agent 住进了 iMessage、Windows 和 ChatGPT</h1>
+    <div class="h1-sub">2026-06-05 · 今日精选 7 条 · 全球动态 × 中国机会</div>
+  </header>
+
+  <div class="sec"><span class="dot"></span>今日速览</div>
+  <ul class="tldr">
+    <li><span class="num">1</span><span><b>平台级洗牌</b>：同一周，苹果 iMessage、微软 Windows、Google Gemini 不约而同把"第三方 Agent 接入系统入口"变成既定方向——Agent 不再是一个 App，而是住进 OS 和 IM 的常驻能力。</span></li>
+    <li><span class="num">2</span><span><b>资本分水岭</b>：Anthropic 以 $965B 估值反超 OpenAI 并秘密递交 IPO，AI IPO 超级周期开启（Cerebras 上市首日 +68%）。</span></li>
+    <li><span class="num">3</span><span><b>中国信号转正</b>：国产开源模型周 Token 调用已占全球 60%+，MiniMax 海外收入超 70%、Kimi K2.5 上线 20 天收入超去年全年——出海从"尝试"变成"主线"。</span></li>
+  </ul>
+
+  <div class="radar" style="margin-top:24px">
+    <div class="sec"><span class="dot"></span>🇨🇳 中国机会雷达</div>
+    <div class="radar-item"><span class="ic">🎯</span><span><b>超级入口的 Agent 化是最大复刻位</b> — 苹果刚放开 iMessage 给第三方 Agent；国内真正的入口是微信 / 支付宝 / 抖音。谁先把"对话即办事"的第三方 Agent 接入协议跑通，谁就拿下一轮分发红利。</span></div>
+    <div class="radar-item"><span class="ic">🌊</span><span><b>开源出海是已验证的顺风</b> — 国产开源模型占全球调用 60%+，是中国团队做"全球开发者工具 / Agent 基础设施"最稀缺的免费流量入口，值得围绕它做 API、Agent 框架、垂直应用的出海。</span></div>
+    <div class="radar-item"><span class="ic">💰</span><span><b>商业化模板已现</b> — OpenAI 在 ChatGPT 上的自助广告 6 周做到 $1 亿，验证"AI 入口广告化"。豆包 / Kimi / 元宝坐拥更大日活，广告与电商导购的变现窗口比想象中近。</span></div>
+  </div>
+
+  <div class="sec" style="margin-top:30px"><span class="dot"></span>全球动态</div>
+
+  <!-- 1 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag launch">新品发布</span>
+      <span class="src">9to5Mac · 6/4</span>
+    </div>
+    <h3><a href="https://9to5mac.com/2026/06/04/apples-messages-app-on-iphone-now-has-a-third-party-ai-agent/" target="_blank">苹果把第三方 AI Agent 放进 iMessage（Poke 首发）</a></h3>
+    <img class="thumb" src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/poke-messages-app.jpg?quality=82&strip=all&w=1600" alt="" onerror="this.style.display='none'">
+    <div class="row"><span class="lab">是什么</span><span>苹果借 Messages for Business 通道，批准 Poke 成为 iPhone 信息 App 内首个第三方 AI Agent，可在 iMessage 里直接对话、代办任务、调用外部集成。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>这是苹果第一次把系统级 IM 入口开给外部 Agent——iMessage 的分发量级一旦放开，等于给 Agent 创业者开了一条苹果原生渠道。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>国内对位入口是微信 / 支付宝。"对话即办事"的接入协议谁先跑通谁吃分发红利；也提醒做独立 AI 助手 App 的团队——入口正在被平台收编。</span></div>
+    <a class="more" href="https://9to5mac.com/2026/06/04/apples-messages-app-on-iphone-now-has-a-third-party-ai-agent/" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag trend">平台趋势</span>
+      <span class="src">CNBC / Build 2026 · 6/2–6/4</span>
+    </div>
+    <h3><a href="https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html" target="_blank">微软 Build 2026：Windows 变成"Agent 运行时"</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>纳德拉以 "agent-first" 定调，宣称 Windows 不再是"人运行 App 的系统"，而是"Agent 替你干活的运行时"；GitHub Copilot 升级为可建应用、跑命令、执行多步工作流的自治开发者桌面端，Agent 365 已 GA。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>操作系统层把 Agent 设为一等公民，意味着 Agent 的调度、身份与权限将成为新的平台层。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>国产 OS / 输入法 / 超级 App 有机会做"中国版 Agent runtime"；更现实的是企业侧——Agent 身份、审计、权限管控（对标 Agent 365）在国内合规语境下是确定性 B 端需求。</span></div>
+    <a class="more" href="https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag model">模型/助手</span>
+      <span class="src">TechCrunch / blog.google · I/O 2026</span>
+    </div>
+    <h3><a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank">Google Gemini Spark 全天候 Agent + Antigravity 2.0 桌面编排器</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>Google 在 I/O 推出常驻 Gmail 的 24/7 主动式助手 Gemini Spark，并发布 Antigravity 2.0 独立桌面应用作为统一编排各类 Agent 的"中控台"；Gemini 3.5 Flash 已 GA 且在 agentic 基准上反超上代 Pro。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>"主动式 + 跨应用编排"是助手从问答走向代理的关键一跃，Flash 反超 Pro 也说明速度/成本曲线正在被重画。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>邮箱场景在国内弱，但"常驻工作流的主动 Agent"在飞书 / 钉钉 / 企微生态是真需求；桌面编排器形态给国内做"Agent 中控台"的工具型创业指了具体方向。</span></div>
+    <a class="more" href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag fund">融资里程碑</span>
+      <span class="src">Crunchbase / Anthropic · 5月底–6/2</span>
+    </div>
+    <h3><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-autonomy-biotech-anthropic/" target="_blank">Anthropic $965B 估值反超 OpenAI，秘密递交 IPO</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>Anthropic 完成 $65B H 轮、post-money $965B，超过 OpenAI 上一轮 $852B，并确认已保密递交 IPO；6/2 把关键基础设施安全计划 Project Glasswing 扩展到 15+ 国约 150 家机构。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>一线模型厂商进入 IPO 超级周期（Cerebras 首日 +68%、SpaceX 6/8 路演），资本正把"AI 安全 / 关键基础设施"作为新护城河叙事。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>一级市场同步重定价——Kimi 半年融资近 400 亿、DeepSeek 估值或达 $500 亿。"安全 / 主权 AI"叙事（对标 Glasswing、智谱主权 AI）是中国团队出海拿政府与大 B 单的差异化抓手。</span></div>
+    <a class="more" href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-autonomy-biotech-anthropic/" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag trend">商业模式</span>
+      <span class="src">Axios / OpenAI · 2月起，6月扩张</span>
+    </div>
+    <h3><a href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform" target="_blank">OpenAI 在 ChatGPT 上线自助广告平台 + 实时语音/翻译模型</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>OpenAI 把广告从 $20 万起的试点做成任意预算可投的自助平台，目标今年 $25 亿广告收入，前 6 周已入账 $1 亿；同期发布面向 Agent 的实时音频与翻译模型。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>这是 AI 入口商业模式的第一个规模化样本——对话流量开始像搜索一样被变现，实时语音让 Agent 走向"能听会说"的连续交互。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>国内豆包 / Kimi / 元宝日活更大却变现路径未定，$1 亿 / 6 周是可参照模板；实时语音翻译直接利好做跨境客服、出海导购、硬件语音助手的团队。</span></div>
+    <a class="more" href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag trend">中国出海</span>
+      <span class="src">知乎 / 36氪 · 本周</span>
+    </div>
+    <h3><a href="https://zhuanlan.zhihu.com/p/2015016635807855189" target="_blank">中国 AI 出海转入主线：开源占全球调用 60%+，MiniMax 海外收入超 70%</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>"AI 四小龙"差异化出海——Kimi K2.5 上线不到 20 天收入超 2025 全年；MiniMax 海外收入占比 >70%、覆盖 200+ 国；智谱落地马来西亚国家级 AI 平台；全球 API 周 Token 调用中，中国开源模型占比已 >60%。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>中国模型第一次在"全球真实使用量"而非纸面榜单上拿到话语权，斯坦福 AI Index 2026 称中美模型差距已收窄到个位数。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>这条本身就是机会地图——围绕国产开源模型做全球分发的中间层（部署、Agent 框架、垂直应用）是当下最稀缺的免费流量；B 端"主权 AI"出海（智谱路径）是政府大单入口。</span></div>
+    <a class="more" href="https://zhuanlan.zhihu.com/p/2015016635807855189" target="_blank">读原文 →</a>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <div class="card-top">
+      <span class="tag launch">新品热榜</span>
+      <span class="src">Product Hunt · 本周</span>
+    </div>
+    <h3><a href="https://www.producthunt.com/leaderboard/daily/2026/6/2" target="_blank">Product Hunt 本周：云端 Coding Agent 与"活文档"成新热点</a></h3>
+    <div class="row"><span class="lab">是什么</span><span>本周热门含 Replicas（在云端跑 Claude Code / Codex 的 Agent）、Mina 会议助手（47 万+ 票）、Moxie Docs（活文档 + 给 GitHub 仓库的 MCP 上下文）、Brand Context API（给 Agent 喂 5000 万+ 品牌上下文）。</span></div>
+    <div class="row"><span class="lab">为什么</span><span>风向从"聊天机器人"转向"给 Agent 供数据 / 上下文 / 运行环境"的基础设施层——MCP 正在成为事实标准接口。</span></div>
+    <div class="row cn"><span class="lab">中国机会</span><span>"给 Agent 供上下文"（MCP 服务、企业知识 / 品牌 / 商品上下文 API）是国内几乎空白、且不依赖自研大模型的轻创业切口；云端跑 Coding Agent 也适配国内研发降本需求。</span></div>
+    <a class="more" href="https://www.producthunt.com/leaderboard/daily/2026/6/2" target="_blank">读原文 →</a>
+  </div>
+
+  <footer>
+    <div>📡 信源：9to5Mac · CNBC · TechCrunch · Axios · Crunchbase · Product Hunt · 知乎 · 36氪 · 各家官方博客</div>
+    <div>🤖 由 ai-native-digest skill 自动生成 · 2026-06-05 · 仅供个人洞察参考，请点击原文核实</div>
+  </footer>
+
+</div>
+</body>
+</html>
